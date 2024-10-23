@@ -1,0 +1,36 @@
+### 1. Add a new transaction (POST /transactions)
+POST http://localhost:3000/transactions
+Content-Type: application/json
+
+{
+  "type": "income",
+  "category": "Salary",
+  "amount": 5000,
+  "date": "2024-01-01",
+  "description": "January Salary"
+}
+
+### 2. Get all transactions (GET /transactions)
+GET http://localhost:3000/transactions
+
+### 3. Get a transaction by ID (GET /transactions/:id)
+# Replace :id with a valid transaction ID after creating a transaction
+GET http://localhost:3000/transactions/1
+
+### 4. Update a transaction by ID (PUT /transactions/:id)
+PUT http://localhost:3000/transactions/1
+Content-Type: application/json
+
+{
+  "type": "expense",
+  "category": "Rent",
+  "amount": 1200,
+  "date": "2024-01-05",
+  "description": "Monthly Rent"
+}
+
+### 5. Delete a transaction by ID (DELETE /transactions/:id)
+DELETE http://localhost:3000/transactions/1
+
+### 6. Get summary (GET /summary)
+GET http://localhost:3000/transactions/summary
